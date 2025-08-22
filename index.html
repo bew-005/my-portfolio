@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      padding-top: 70px; /* สำหรับ fixed-top navbar */
+    }
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img src="005.jpg" alt="Profile" width="80" height="80" class="rounded-circle me-2">
+          My Portfolio
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+
+    <!-- Home Section -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="11.jpg" class="d-block w-100" >
+            </div>
+          </div>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="mb-4 text-center">ผลงานของฉัน</h2>
+    <div class="row">
+      <!-- Project 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100">
+          <img src="13.avif" class="card-img-top" alt="โปรเจกต์ 1">
+          <div class="card-body">
+            <h5 class="card-title">โปรเจกต์ 1</h5>
+            <p class="card-text">บ้านสมัยใหม่ในธรรมชาติ(สมมุติ)</p>
+            <button class="btn btn-primary" onclick="toggleDetails('detail1')">เพิ่มเติม</button>
+            <p id="detail1" class="project-detail" style="display:none; margin-top:10px;">
+              รายละเอียดเพิ่มเติมของโปรเจกต์ 1: เป็นโปรเจกต์บ้านที่รวมเอาธรรมชาติไว้ในองค์รวมของงานออกแบบ เน้นความเรียบง่าย โปร่งสบาย และไม่มีตัวคนปรากฏในภาพ
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100">
+          <img src="14.webp" class="card-img-top" alt="โปรเจกต์ 2">
+          <div class="card-body">
+            <h5 class="card-title">โปรเจกต์ 2</h5>
+            <p class="card-text">งานดีไซน์ภายใน(สมมุติ)</p>
+            <button class="btn btn-primary" onclick="toggleDetails('detail2')">เพิ่มเติม</button>
+            <p id="detail2" class="project-detail" style="display:none; margin-top:10px;">
+              รายละเอียดเพิ่มเติมของโปรเจกต์ 2: เป็นโปรเจกต์ที่เน้นถึงองค์ประกอบทางสถาปัตย์ภายใน เช่น การใช้โครงสร้างแสงและวัสดุสร้างบรรยากาศ งานประเภทนี้เหมาะสำหรับเสนอผลงานออกแบบภายใน อาคาร โชว์รูม หรือพื้นที่ใช้งานเฉพาะ
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-12 mb-4">
+        <div class="card h-100">
+          <img src="15.webp" class="card-img-top" alt="โปรเจกต์ 3">
+          <div class="card-body">
+            <h5 class="card-title">โปรเจกต์ 3</h5>
+            <p class="card-text">อาคารหรือสิ่งก่อสร้างสถาปัตยกรรม(สมมุติ)</p>
+            <button class="btn btn-primary" onclick="toggleDetails('detail3')">เพิ่มเติม</button>
+            <p id="detail3" class="project-detail" style="display:none; margin-top:10px;">
+              รายละเอียดเพิ่มเติมของโปรเจกต์ 3: เป็นโปรเจกต์ที่แสดงลักษณะอาคารจริงโดยไม่มีคน อยู่ในพื้นที่ชัดเจน เช่น อาคารสถาปัตยกรรมสาธารณะ อาคารตามจุดสำคัญ ซึ่งเน้นการจัดองค์ประกอบสายตาและโครงสร้าง
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function toggleDetails(id) {
+    const detail = document.getElementById(id);
+    if (detail.style.display === "none") {
+      detail.style.display = "block";
+    } else {
+      detail.style.display = "none";
+    }
+  }
+</script>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+      <div class="container">
+        <h2 class="mb-4 text-center">ติดต่อเรา</h2>
+        <form>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">ชื่อ</label>
+              <input type="text" class="form-control" id="firstName" placeholder="ชื่อของคุณ">
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">นามสกุล</label>
+              <input type="text" class="form-control" id="lastName" placeholder="นามสกุลของคุณ">
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">อีเมล</label>
+            <input type="email" class="form-control" id="email" placeholder="your@email.com">
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">ข้อความ</label>
+            <textarea class="form-control" id="message" rows="5" placeholder="เขียนข้อความของคุณที่นี่"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p class="mb-0">พัฒนาโดย นายกันตภณ เกิดทวี / Email: 68319080005@tatc.ac.th</p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
